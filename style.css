@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli:ital,wght@1,600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Muli', sans-serif;
+    background: rgb(49, 51, 46);
+    color: white;
+}
+
+.container {
+    margin: auto;
+    max-width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    text-align: center;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.alert {
+    background-color: white;
+    color: black;
+    width: 500px;
+    height: 100px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 8px 2px #888888;
+    padding: 5px;
+    margin: 5px;
+}
+
+.flex {
+    display: flex;
+}
+
+input,
+button {
+    border: 1px solid gray;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    margin: 0;
+    font-size: 14px;
+    padding: 8px 10px;
+}
+
+input[type='text'] {
+    width: 300px;
+}
+
+input[type='text']:focus {
+    outline: none;
+}
+
+.search-btn {
+    cursor: pointer;
+    border-left: none;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.search-btn:hover,
+.random-btn:hover {
+    background-color: lightgray;
+    transition: 0.3s all ease-in;
+}
+
+button:focus {
+    outline: none;
+}
+
+.random-btn {
+    margin-left: 10px;
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.meals {
+    display: block;
+}
+
+@media(max-width: 800px) {}
+
+@media(max-width: 700px) {}
+
+@media(max-width: 500px) {
+    input[type='text'] {
+        width: 100%;
+    }
+}
