@@ -18,21 +18,21 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 20vh;
+    align-content: center;
     text-align: center;
     flex-direction: column;
-    padding: 2rem;
 }
 
 .alert {
     background-color: white;
     color: black;
-    width: 500px;
-    height: 100px;
+    width: 100%;
+    height: 50px;
     border-radius: 5px;
     box-shadow: 2px 2px 8px 2px #888888;
     padding: 5px;
     margin: 5px;
+    padding-top: 15px;
 }
 
 .flex {
@@ -84,7 +84,80 @@ button:focus {
 }
 
 .meals {
-    display: block;
+    /* display: flex;
+    flex-direction: row; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    margin-top: 10px;
+}
+
+.meal {
+    border-radius: 5px;
+    cursor: pointer;
+    height: 180px;
+    width: 180px;
+    border: 2px solid white;
+    position: relative;
+}
+
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.meal-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s opacity ease-in;
+    opacity: 0;
+}
+
+.meal-info:hover {
+    opacity: 1;
+}
+
+.single-meal {
+    margin: 20px auto;
+    width: 80%;
+}
+
+.single-meal img {
+    width: 200px;
+    height: 200px;
+    border: 2px solid white;
+    border-radius: 2px;
+}
+
+.single-meal p {
+    line-height: 1.5rem;
+}
+
+.single-meal-info {
+    margin: 20px;
+    border: 1px solid white;
+    border-radius: 3px;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.main h2 {
+    margin: 10px;
+    text-decoration: underline;
+    font-size: 30px;
+}
+
+.main ol li {
+    border-bottom: 1px solid grey;
+    margin: 10px;
 }
 
 @media(max-width: 800px) {}
@@ -94,5 +167,14 @@ button:focus {
 @media(max-width: 500px) {
     input[type='text'] {
         width: 100%;
+    }
+
+    .meals {
+        /* display: flex;
+        flex-direction: row; */
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+        margin-top: 10px;
     }
 }
